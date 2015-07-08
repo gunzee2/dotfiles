@@ -1,0 +1,9 @@
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+# ネストが深すぎる
+BlockNesting:
+  Max: 5
+# クラスの行数が多すぎる
+ClassLength:
+  Enabled: false
