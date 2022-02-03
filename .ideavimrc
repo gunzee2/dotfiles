@@ -1,0 +1,55 @@
+﻿" setting
+
+
+" 折り返し時に表示行単位での移動できるようにする
+nnoremap j gj
+nnoremap k gk
+
+set autoindent
+set smartindent
+
+" vvで行末まで選択
+vnoremap v ^$h
+
+
+" 検索系
+" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set ignorecase
+" 検索文字列に大文字が含まれている場合は区別して検索する
+set smartcase
+" 検索文字列入力時に順次対象文字列にヒットさせる
+set incsearch
+" 検索時に最後まで行ったら最初に戻る
+set wrapscan
+" 検索語をハイライト表示
+set hlsearch
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+"x キー削除でデフォルトレジスタに入れない
+nnoremap x "_x
+vnoremap x "_x
+
+"選択範囲のインデントを連続して変更
+vnoremap < <gv
+vnoremap > >gv
+" TABにて対応ペアにジャンプ
+nnoremap &lt;Tab&gt; %
+vnoremap &lt;Tab&gt; %
+
+"; : 交換
+nnoremap ;  :
+nnoremap :  ;
+vnoremap ;  :
+vnoremap :  ;
+
+nnoremap <C-l> gt
+nnoremap <C-h> gT
+
+inoremap jj <Esc>
+inoremap っj <Esc>
+
+"ESC ESCで検索のハイライトを消す
+nnoremap <Esc><Esc> :noh<CR>
+
+set visualbell t_vb=
